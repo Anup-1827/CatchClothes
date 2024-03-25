@@ -1,0 +1,94 @@
+{
+  "name": "Face Game",
+  "type": "catch-clothes",
+  "tagName": "catch-clothes",
+  "version": 2,
+  "customElementsVersion": 1,
+  "description": "Face Detection Component",
+  "files": {
+    "js": [
+      "tfjs-core.js",
+      "tfjs-converter.js",
+      "tf-backend-webgl.js",
+      "tf-backend-cpu.min.js",
+      "facemesh.js",
+      "face-landmarks-detection.js",
+      "assetFunc.js",
+      "script-facedetect.js"
+    ]
+  },
+  "attributes": [
+    {
+      "name": "videowidth",
+      "label": "Video Width",
+      "type": "string",
+      "required": true,
+      "description": "This is the Width of the Video"
+    },
+    {
+      "name": "videoheight",
+      "label": "Video Height",
+      "type": "string",
+      "required": true,
+      "description": "This is the Height of the Video"
+    },
+    {
+      "name": "showcanvas",
+      "label": "Show Canvas (true/false)",
+      "type": "string",
+      "description": "Canvas will be shown or hidden"
+    },
+    {
+      "name": "canvasscalex",
+      "label": "Canvas Scale X Range",
+      "type": "string",
+      "description": "Canvas Scale Range"
+    },
+    {
+      "name": "canvasscaley",
+      "label": "Canvas Scale Y Range",
+      "type": "string",
+      "description": "Canvas Scale Range"
+    },
+    {
+      "name": "canvasx",
+      "label": "Canvas X Coordinates",
+      "type": "string",
+      "description": "Canvas X Coordinates"
+    },
+    {
+      "name": "canvasy",
+      "label": "Canvas Y Coordinates",
+      "type": "string",
+      "description": "Canvas Y Coordinates"
+    },
+    {
+      "name": "assetwidth",
+      "label": "Assets Width",
+      "type": "string",
+      "description": "Assets Width"
+    },
+    {
+      "name": "assetheight",
+      "label": "Assets Height",
+      "type": "string",
+      "description": "Assets Height"
+    },
+    {
+      "name": "bucketwidth",
+      "label": "Bucket Width",
+      "type": "string",
+      "description": "Bucket Height"
+    },
+    {
+      "name": "bucketheight",
+      "label": "Bucket Height",
+      "type": "string",
+      "description": "Bucket Height"
+    }
+  ],
+  "events": [],
+  "methods": [],
+  "dependencies": [],
+  "nestable": false
+}

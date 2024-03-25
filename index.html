@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Catch Clothes Component</title>
+    <!-- <script type="module" src="./face-api.min.js"></script> -->
+    <!-- <script type="module" src="./face-landmarks-detection.js"></script> -->
+    <script src="./tfjs-core.js"></script>
+    <script src="./tfjs-converter.js"></script>
+    <script src="./tf-backend-webgl.js"></script>
+    <script src="./tf-backend-cpu.min.js"></script>
+    <script src="./tf-backend-cpu.min.js"></script>
+    <script src="./facemesh.js"></script>
+    <script src="./face-landmarks-detection.js"></script>
+    <script src="./assetFunc.js"></script>
+    <script type="module" src="./script-facedetect.js"></script>
+  </head>
+  <body>
+    <div>
+      <label>VideoWidth</label>
+      <input type="number" name="videoWidth" />
+      <br />
+
+      <label>VideoHeight</label>
+      <input type="number" name="videoHeight" />
+      <br />
+      <br />
+
+      <h4>Canvas Settings</h4>
+      <label>Show Canvas</label>
+      <input type="text" name="showcanvas" />
+      <br/>
+      <label>Canvas ScaleX</label>
+      <input type="number" name="canvasscalex" />
+      <br/>
+      <label>Canvas ScaleY</label>
+      <input type="number" name="canvasscaley" />
+      <br/>
+      <label>Canvas X</label>
+      <input type="number" name="canvasx" />
+      <br/>
+      <label>Canvas Y</label>
+      <input type="number" name="canvasy" />
+
+      
+      <br />
+      <br />
+       
+      <button onclick="handleParamChanged()">Change Video Params</button>
+    </div>
+
+    <catch-clothes videowidth="640" videoheight="480" showcanvas="true" canvasscalex="" canvasscaley="" canvasx="" canvasy=""></catch-clothes>
+    <!-- <catch-clothes videoWidth="" videoHeight=""></catch-clothes> -->
+
+    <script>
+      function handleParamChanged(e) {
+        const input = document.querySelectorAll("input");
+        const customElementClothes = document.querySelector("catch-clothes");
+        input.forEach((item) => {
+            customElementClothes.setAttribute(item.name, item.value);
+        });
+      }
+    </script>
+  </body>
+</html>

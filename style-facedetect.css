@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#mainDivElement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+  margin: 10px;
+}
+
+#videoElementId {
+  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
+  object-fit: fill;
+}
+
+#bucketDiv {
+  position: absolute;
+  bottom: 15%;
+  display: flex;
+  z-index: 1;
+}
+
+#bucketDiv #poof {
+  position: absolute;
+  display: none;
+  top: -23px;
+  right: 8px;
+}
+
+#fallingObjectDiv, #canvasDiv {
+  position: absolute;
+  top: 0;
+}
+
+#caughtMessage {
+  width: 100%;
+  min-height: 50px;
+  text-align: center;
+  background: white;
+  z-index: 1;
+  font-weight: bold;
+  font-size: 30px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#loadingDiv {
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+#loadingDiv:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+#loadingDivText{
+  font-weight: bold;
+  color: white;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
