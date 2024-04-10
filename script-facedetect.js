@@ -131,8 +131,8 @@ function loadModel(context, canvasDiv) {
   faceLandmarksDetection
     .load(faceLandmarksDetection.SupportedPackages.mediapipeFacemesh, {
       runtime: "mediapipe",
-      solutionPath: "facemesh.js",
-      // solutionPath: "https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh",
+      // solutionPath: "facemesh.js",
+      solutionPath: "https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh",
       maxFaces: 1,
       scale: 0.8,
     })
@@ -178,7 +178,7 @@ async function detector(context, net) {
     returnTensors: false,
     predictIrises: false,
   });
-  console.log(faces[0]);
+  // console.log(faces[0]);
   if (faces.length > 0) {
     // Loading
     context.shadowRoot.getElementById("loadingDivText").innerText =

@@ -30,7 +30,11 @@
 
       <h4>Canvas Settings</h4>
       <label>Show Canvas</label>
-      <input type="text" name="showcanvas" />
+      <!-- <input type="text" name="showcanvas" /> -->
+      <select name="showcanvas">
+        <option value="true">True</option>
+        <option value="false">False</option>
+      </select>
       <br/>
       <label>Canvas ScaleX</label>
       <input type="number" name="canvasscalex" />
@@ -49,6 +53,9 @@
       <br />
        
       <button onclick="handleParamChanged()">Change Video Params</button>
+      <br/>
+      <br/>
+      <br/>
     </div>
 
     <catch-clothes videowidth="640" videoheight="480" showcanvas="true" canvasscalex="" canvasscaley="" canvasx="" canvasy=""></catch-clothes>
@@ -56,7 +63,8 @@
 
     <script>
       function handleParamChanged(e) {
-        const input = document.querySelectorAll("input");
+        const input = document.querySelectorAll("input, select");
+        console.log(input);
         const customElementClothes = document.querySelector("catch-clothes");
         input.forEach((item) => {
             customElementClothes.setAttribute(item.name, item.value);
